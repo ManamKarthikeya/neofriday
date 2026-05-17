@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+body {
+  background-color: #212121;
+  color: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #686868;
+}
+
+/* markdown styles */
+.prose pre {
+  background-color: #0d0d0d;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose code {
+  color: #e5e7eb;
+  background-color: #2f2f2f;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+}
+.prose p {
+  margin-bottom: 1rem;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
