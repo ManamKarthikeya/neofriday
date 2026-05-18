@@ -6,7 +6,7 @@ import { SYSTEM_PROMPT } from './systemPrompt';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const client = new OpenAI({
-  baseURL: "http://localhost:5173/api/nvidia",
+  baseURL: "/api/nvidia",
   apiKey: import.meta.env.VITE_NVIDIA_API_KEY,
   dangerouslyAllowBrowser: true 
 });
