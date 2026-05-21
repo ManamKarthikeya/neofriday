@@ -342,6 +342,20 @@ function App() {
       
       setShowCompletion(true);
       
+      // Notify FRIDAY that the PRD has been successfully generated
+      try {
+        await fetch('http://localhost:8000/prd-completed', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ content: aiMessageContent })
+        });
+        console.log("Notified FRIDAY successfully.");
+      } catch (err) {
+        console.error("Failed to notify FRIDAY:", err);
+      }
+      
     } catch (error) {
       console.error("Error calling NVIDIA API:", error);
       setMessages((prev) => [...prev, { role: 'assistant', content: "**Error:** Failed to communicate with the AI. Please check your API key and connection." }]);
